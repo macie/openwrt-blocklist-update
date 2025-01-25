@@ -1,0 +1,19 @@
+# Allowlist for sh project
+
+# Ignore everything
+*
+
+# Allow CI configs
+!/.gitignore
+!/.github/**/*.yml
+!/Makefile
+
+# Allow source code...
+!/openwrt-blocklist-update
+!*.sh
+
+!README.md
+!LICENSE
+
+# ...also in subdirectories
+!*/
