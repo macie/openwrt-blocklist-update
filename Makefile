@@ -1,6 +1,9 @@
 # This Makefile intended to be POSIX-compliant (2024 edition).
 #
 # More info: <https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html>
+#
+# SPDX-FileCopyrightText: 2025 Maciej Żok <https://github.com/macie/openwrt-blocklist-update>
+# SPDX-License-Identifier: MIT
 .POSIX:
 .SUFFIXES:
 
@@ -18,7 +21,6 @@ TEST    = ./unittest
 #
 # INTERNAL MACROS
 #
-
 
 CLI_CURRENT_VER_TAG   = $$(git tag --points-at HEAD | sed 's/^v//' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)
 CLI_LATEST_VERSION    = $$(git describe --tags --abbrev=0 2>/dev/null | sed 's/^v//')

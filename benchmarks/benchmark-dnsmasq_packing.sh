@@ -1,5 +1,5 @@
 #!/bin/sh
-# <https://github.com/macie/openwrt-blocklist-update>
+# SPDX-FileCopyrightText: 2025 Maciej Żok
 # SPDX-License-Identifier: 0BSD
 set -eu
 

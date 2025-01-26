@@ -14,4 +14,6 @@ Use `make`:
 
 ## License
 
-[MIT](./LICENSE) (see: [in Plain English](https://www.tldrlegal.com/license/mit-license)).
+Unless otherwise specified, source code in this repository is licensed under the [MIT License](./LICENSE) (see: [in Plain English](https://www.tldrlegal.com/license/mit-license)).
+
+Benchmarks source code is licensed under the [BSD 0-Clause License](./benchmarks/LICENSE) (see: [in Plain English](https://www.tldrlegal.com/license/bsd-0-clause-license)).
