@@ -1,5 +1,8 @@
 # OpenWrt blocklist-update
 
+[![Quality check status](https://github.com/macie/openwrt-blocklist-update/actions/workflows/check.yml/badge.svg)](https://github.com/macie/openwrt-blocklist-update/actions/workflows/check.yml)
+[![License](https://img.shields.io/github/license/macie/openwrt-blocklist-update)](https://tldrlegal.com/license/mit-license)
+
 ## Development
 
 Use `make`:
