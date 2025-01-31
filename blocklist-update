@@ -1,0 +1,24 @@
+#!/bin/sh
+# blocklist-update - update dnsmasq blocklist using external blocklists.
+#
+# SPDX-FileCopyrightText: 2025 Maciej Żok <https://github.com/macie/openwrt-blocklist-update>
+# SPDX-License-Identifier: MIT
+
+# shellcheck disable=SC3040 # supported by busybox ash & POSIX 2024
+set -euo pipefail
+
+_NAME='blocklist-update'
+
+# shellcheck disable=SC2317  # function used inside trap only
+exit_handler() {
+	_ret="$?"
+	if [ "$_ret" -ne 0 ]; then
+		logger -t "$_NAME" -p user.warn -s "blocklist not updated"
+	fi
+	exit "$_ret"
+}
+trap exit_handler EXIT INT TERM
+
+logger -t "$_NAME" -p user.info -s "update started" 
+
+exit 69  # EX_UNAVAILABLE

@@ -12,7 +12,7 @@
 # PUBLIC MACROS
 #
 
-CLI     = openwrt-blocklist-update
+CLI     = blocklist-update
 DESTDIR = ./dist
 LINT    = shellcheck
 TEST    = ./unittest
@@ -69,7 +69,7 @@ dist:
 	@echo '# Copy CLI executable to $(DESTDIR)/$(CLI)' >&2
 	@mkdir -p $(DESTDIR); cp $(CLI) $(DESTDIR)/
 	@echo '# Update version number to $(CLI_VERSION)' >&2
-	@sed -i 's/^# Version: .*/# Version: '$(CLI_VERSION)'/' $(DESTDIR)/$(CLI)
+	@sed -i 's/^\(CLI_VERSION *=\).*/\1'$(CLI_VERSION)'/' $(DESTDIR)/$(CLI)
 	@echo '# Add executable checksum to: $(DESTDIR)/$(CLI).sha256sum' >&2
 	@cd $(DESTDIR); sha256sum $(CLI) >> $(CLI).sha256sum
 

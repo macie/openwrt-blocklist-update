@@ -1,4 +1,4 @@
-# openwrt-blocklist-update
+# OpenWrt blocklist-update
 
 ## Development
 

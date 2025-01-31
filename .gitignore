@@ -9,7 +9,7 @@
 !/Makefile
 
 # Allow source code...
-!/openwrt-blocklist-update
+!/blocklist-update
 !*.sh
 
 !README.md
